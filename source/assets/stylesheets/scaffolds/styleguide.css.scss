@@ -36,9 +36,6 @@
   clear: both;
 }
 
-// The grid is being set to 12 columns for the Amwins
-// grid. This will reset the grid specific to the styleguide
-// to 16 columns
 @include with-grid-settings(16,4em,1.5em,1.5em) {
   #styleguide-container {
     @include container;
@@ -57,9 +54,6 @@
   }
 }
 
-// Readjusts the AmWINS grid to it can be 
-// nested correctly within the grid being used
-// for the styleguide
 @include with-grid-settings(12,4em,1.5em,0) {
   .grids { 
     @include container; 

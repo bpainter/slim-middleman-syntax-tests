@@ -21,14 +21,14 @@ head
 
   meta name="viewport" content="width=device-width"
 
-  == stylesheet_link_tag "global","scaffolds/styleguide", "themes/styleguide", "themes/amwins/amwins"
+  == stylesheet_link_tag "global","scaffolds/styleguide", "themes/styleguide"
   == javascript_include_tag "libs/modernizr"
   
   body#styleguide
     #styleguide-container
       == yield
 
-    == javascript_include_tag "libs/jquery", "global", "modules/forms-accessible-options", "modules/forms-accessible-selects"
+    == javascript_include_tag "libs/jquery"
 
     / Google Analytics
     / javascript:
