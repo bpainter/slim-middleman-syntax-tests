@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"></html>
+<![endif]--><!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"></html>
+<![endif]--><!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"></html>
+<![endif]--><!--[if gt IE 8]>
+<html class="no-js" lang="en"></html>
+<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <title>Slim Syntax Tests</title>
+  <meta content="" name="description" />
+  <meta content="width=device-width" name="viewport" />
+  <link href="assets/stylesheets/global.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="assets/stylesheets/scaffolds/styleguide.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="assets/stylesheets/themes/styleguide.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="assets/stylesheets/themes/amwins/amwins.css" media="screen" rel="stylesheet" type="text/css" /><script src="assets/javascripts/libs/modernizr.js" type="text/javascript"></script>
+  <body id="styleguide">
+    <div id="styleguide-container"><h1>
+  Syntax Tests
+</h1>
+<section class="styleguide-module-details">
+  <h2>
+    Inline Code Helper (Slim Version)
+  </h2>
+  <p>
+    Using the Ruby (Slim) version of the code helper <code>- code(&quot;html&quot;) do</code>. The syntax helper creates the correct HTML wrapping the code snippets but doesn't render renders the HTML entities for the entire block, instead of the syntax highlighted version of the code snippet.
+  </p>
+  <div class="styleguide-code">&lt;pre class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;div class=&quot;lineno&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;lineno&quot;&gt;2&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;field&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;label&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Basic Input Label&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;40&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Placeholder Text&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/pre&gt;
+  </div>
+</section>
+<section class="styleguide-module-details">
+  <h2>
+    Inline Code Helper (Embed Engine - ERB)
+  </h2>
+  <p>
+    Using the <code>erb:</code> embed engine to mimic the Ruby example in the Middleman Syntax docs with <code>&lt;% code(&quot;html&quot;) do %&gt;&lt;% end %&gt;</code>.
+  </p>
+  <div class="styleguide-code">&lt;pre class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;div class=&quot;lineno&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;lineno&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;lineno&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;lineno&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;lineno&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;lineno&quot;&gt;6&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;field&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Basic Input Label&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;40&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Placeholder Text&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/pre&gt;
+  </div>
+</section>
+<section class="styleguide-module-details">
+  <h2>
+    Inline Code Helper (Embed Engine - Markdown)
+  </h2>
+  <p>
+    Using the <code>markdown:</code> embed engine to mimic the Markdown/Redcarpet example in the Middleman Syntax docs with <code>```html```</code>. This actually renders a <code>&lt;code&gt;</code> block instead of <code>&lt;pre&gt;</code>. This looks like it's more of an issue with how Middleman renders markdown through the embed engine. This same code in a .md file works just fine (example further down).
+  </p>
+  <div class="styleguide-code"><p><code>
+&lt;div class=&quot;field&quot;&gt;
+  &lt;label for=&quot;basic-input&quot;&gt;Basic Input Label&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;basic-input&quot; name=&quot;basic-input&quot; size=&quot;40&quot; placeholder=&quot;Placeholder Text&quot; /&gt;
+&lt;/div&gt;
+</code></p>
+
+  </div>
+</section>
+<section class="styleguide-module-details">
+  <h2>
+    Code Helper (Embedded as a Slim Partial)
+  </h2>
+  <div class="styleguide-code">
+    &lt;pre class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;div class=&quot;lineno&quot;&gt;1&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;field&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;label&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Basic Input Label&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;basic-input&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;40&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Placeholder Text&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/pre&gt;
+  </div>
+</section>
+<section class="styleguide-module-details">
+  <h2>
+    Code Helper (Embedded as an ERB Partial)
+  </h2>
+  <div class="styleguide-code"><pre class="highlight html"><table><tbody><tr><td class="gutter gl"><div class="lineno">1</div><div class="lineno">2</div><div class="lineno">3</div><div class="lineno">4</div></td><td class="code"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;field&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;basic-input&quot;</span><span class="nt">&gt;</span>Basic Input Label<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;basic-input&quot;</span> <span class="na">name=</span><span class="s">&quot;basic-input&quot;</span> <span class="na">size=</span><span class="s">&quot;40&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Placeholder Text&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</td></tr></tbody></table></pre>
+  </div>
+</section>
+<section class="styleguide-module-details">
+  <h2>
+    Code Helper (Embedded as Markdown Partial)
+  </h2>
+  <div class="styleguide-code"><pre class="highlight html"><table><tbody><tr><td class="gutter gl"><div class="lineno">1</div><div class="lineno">2</div><div class="lineno">3</div><div class="lineno">4</div></td><td class="code"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;field&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;basic-input&quot;</span><span class="nt">&gt;</span>Basic Input Label<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;basic-input&quot;</span> <span class="na">name=</span><span class="s">&quot;basic-input&quot;</span> <span class="na">size=</span><span class="s">&quot;40&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Placeholder Text&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</td></tr></tbody></table></pre>
+  </div>
+</section>
+    </div>
+    <script src="assets/javascripts/libs/jquery.js" type="text/javascript"></script>
+    <script src="assets/javascripts/global.js" type="text/javascript"></script>
+    <script src="assets/javascripts/modules/forms-accessible-options.js" type="text/javascript"></script>
+    <script src="assets/javascripts/modules/forms-accessible-selects.js" type="text/javascript"></script>
+  </body>
+</head>

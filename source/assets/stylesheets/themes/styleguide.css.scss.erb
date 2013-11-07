@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+// ----------------------------------------------------
+// Base CSS
+// ----------------------------------------------------
+@import "base/variables";
+@import "themes/amwins/variables";
+@import "base/functions";
+@import "base/mixins";
+@import "base/utilities";
+
+$light-brown:     lighten(#E5DFDA, 10%);
+$blue:            #32558D;
+$font-color:      darken($light-brown, 60%);
+$font-color-alt:  darken($light-brown, 40%);
+$border-color:    darken($light-brown, 10%);
+
+#styleguide {
+  background-color: $light-brown;
+  color: $font-color;
+}
+
+#styleguide-nav-primary {
+  background-color: $blue;
+  a {
+    color: #fff;
+  }
+}
+
+#styleguide-nav-secondary {
+  @include box-sizing(border-box);
+  margin: 5% 0 0;
+  padding: 0;
+  header {
+    border-bottom: 1px solid darken($light-brown, 10%);
+    padding: 5% 5% 5% 5%;
+  }
+  h3 {
+    font-weight: normal;
+    margin: 0;
+  }
+  ul {
+    border-bottom: 1px solid $border-color;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:last-child {
+      border: 0;
+    }
+  }
+  a {
+    color: $font-color-alt;
+    display: block;
+    padding: 3% 3% 3% 5%;
+    text-decoration: none;
+    &:hover, &:focus {
+      background-color: darken($light-brown, 5%);
+      color: $font-color;
+    }
+  }
+}
+
+.styleguide-module-details {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: $baseline*3;
+  padding-bottom: $baseline*3;
+  &:last-child {
+    border: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+code {
+  background-color: $inline-code-background;
+  // color: lighten($font-color, 10%);
+  display: inline-block;
+  // margin-bottom: -$sub-baseline;
+  padding: 0 $sub-baseline;
+}
+.styleguide-options {
+  margin-bottom: $baseline*2;
+  li {
+    margin-bottom: $baseline/2;
+  }
+}
+.styleguide-example {
+  background-color: #fff;
+  border: 1px solid $border-color;
+  margin-bottom: $sub-baseline;
+  padding: $baseline*2 $baseline $baseline $baseline*4;
+  position: relative;
+  // &:before {
+  //   background-color: $border-color;
+  //   content: "Example";
+  //   display: block;
+  //   font-size: .8em;
+  //   padding: $sub-baseline;
+  //   position: absolute;
+  //     top: 0;
+  //     left: 0;
+  // }
+}
+
+.styleguide-code {
+  background-color: #fff;
+  border: 1px solid $border-color;
+  margin-bottom: $baseline;
+}
+
+// Code Highlights
+<%= Rouge::Themes::Base16::Solarized.render(:scope => '.highlight') %>
+
+.highlight {
+  margin: 0;
+  .gutter {
+    background-color: lighten($border-color, 10%);
+    border-right: 1px solid $border-color;
+    padding: $baseline $baseline/2;
+    width: 30px;
+  }
+  .code {
+    padding-left: $baseline;
+  }
+}

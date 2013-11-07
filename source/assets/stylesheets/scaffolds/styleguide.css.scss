@@ -1,0 +1,87 @@
+// Setup
+// ----------------------------------------------------------------
+@import "base/variables";
+@import "base/functions";
+@import "base/mixins";
+@import "base/utilities";
+
+#styleguide-container {
+  padding-top: $baseline*3;
+}
+
+#styleguide-nav-primary {
+  background-color: #ccc;
+  height: $baseline*3;
+  line-height: $baseline*3;
+  padding-left: $gutter-width;
+  position: absolute;
+    top: 0;
+    left: 0;
+  width: 100%;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: $baseline;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+#styleguide-footer {
+  clear: both;
+}
+
+// The grid is being set to 12 columns for the Amwins
+// grid. This will reset the grid specific to the styleguide
+// to 16 columns
+@include with-grid-settings(16,4em,1.5em,1.5em) {
+  #styleguide-container {
+    @include container;
+    max-width: 100%;
+    @if $show-grid {
+      // @include susy-grid-background;  
+    }
+  }
+  #styleguide-article {
+    @include span-columns(13);
+    @include omega;
+  }
+
+  #styleguide-aside {
+    @include span-columns(3);
+  }
+}
+
+// Readjusts the AmWINS grid to it can be 
+// nested correctly within the grid being used
+// for the styleguide
+@include with-grid-settings(12,4em,1.5em,0) {
+  .grids { 
+    @include container; 
+    max-width: 100%;
+    .grid-row {
+      margin-bottom: $baseline;
+    }
+    .one-column,
+    .two-columns,
+    .three-columns,
+    .four-columns,
+    .five-columns,
+    .six-columns,
+    .seven-columns,
+    .eight-columns,
+    .nine-columns,
+    .ten-columns,
+    .eleven-columns {
+      background-color: #ccc;
+      line-height: $baseline*5;
+      height: $baseline*5;
+      text-align: center;
+    }
+  }
+};

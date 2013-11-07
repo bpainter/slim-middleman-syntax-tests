@@ -1,0 +1,58 @@
+---
+title: Slim Syntax Tests
+id: home
+---
+h1 Syntax Tests
+
+section.styleguide-module-details
+  h2 Inline Code Helper (Slim Version)
+  p Using the Ruby (Slim) version of the code helper #{inline_code('- code("html") do')}. The syntax helper creates the correct HTML wrapping the code snippets but doesn't render renders the HTML entities for the entire block, instead of the syntax highlighted version of the code snippet.
+  .styleguide-code
+    - code("html")
+      <div class="field">
+        <label for="basic-input">Basic Input Label</label>
+        <input type="text" id="basic-input" name="basic-input" size="40" placeholder="Placeholder Text" />
+      </div>
+
+section.styleguide-module-details
+  h2 Inline Code Helper (Embed Engine - ERB)
+  p Using the #{inline_code('erb:')} embed engine to mimic the Ruby example in the Middleman Syntax docs with #{inline_code('<% code("html") do %><% end %>')}.
+  .styleguide-code
+    erb:
+      <% code("html") do %>
+        <div class="field">
+          <label for="basic-input">Basic Input Label</label>
+          <input type="text" id="basic-input" name="basic-input" size="40" placeholder="Placeholder Text" />
+        </div>
+      <% end %>
+
+section.styleguide-module-details
+  h2 Inline Code Helper (Embed Engine - Markdown)
+  p Using the #{inline_code('markdown:')} embed engine to mimic the Markdown/Redcarpet example in the Middleman Syntax docs with #{inline_code('```html```')}. This actually renders a #{inline_code('<code>')} block instead of #{inline_code('<pre>')}. This looks like it's more of an issue with how Middleman renders markdown through the embed engine. This same code in a .md file works just fine (example further down).
+  .styleguide-code
+    markdown:
+      ```
+      <div class="field">
+        <label for="basic-input">Basic Input Label</label>
+        <input type="text" id="basic-input" name="basic-input" size="40" placeholder="Placeholder Text" />
+      </div>
+      ```
+
+section.styleguide-module-details
+  h2 Code Helper (Embedded as a Slim Partial)
+
+  .styleguide-code
+    == partial "code-example-1"
+
+section.styleguide-module-details
+  h2 Code Helper (Embedded as an ERB Partial)
+
+  .styleguide-code
+    == partial "code-example-2"  
+
+section.styleguide-module-details
+  h2 Code Helper (Embedded as Markdown Partial)
+
+  .styleguide-code
+    == partial "code-example-3"  
+
