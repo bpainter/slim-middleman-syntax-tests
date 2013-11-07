@@ -116,7 +116,7 @@ configure :build do
   # activate :smusher
 end
 
-configure :deploy do
+activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
 end
